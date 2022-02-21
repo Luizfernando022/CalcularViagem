@@ -1,0 +1,59 @@
+body{
+    display: grid; 
+    padding: 0;
+    margin:  0;
+
+}
+
+#header{
+    display: flex;
+    background-color: rgb(138, 88, 255);
+    height: 75px;
+    align-items: center;
+    justify-content: center;
+}
+#logo{
+    font-size: 34px;
+    color:transparent;
+    background-image: linear-gradient(to right,cyan,cyan,rgb(255, 200, 255),rgb(255, 200, 255),cyan,cyan,RGB(255, 200, 255),RGB(255, 200, 255));
+    -webkit-background-clip: text;
+}
+#container{
+    background-image: linear-gradient(to bottom, rgb(138, 88, 255),rgba(138, 88, 255, 0.446));
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+}
+#title{
+    /* background-color: indigo; */
+    font-size: 1.6vw;
+}
+ @media screen and (max-width:750px){
+    #container{
+        font-size: 0.8em;
+    }
+    #title{
+        font-size: 2.2vw;
+    }
+}
+@media screen and (max-width:570px){
+    #container{
+        font-size: 3vw;
+    }
+    #title{
+        font-size: 3.0vw;
+    }
+}
+@media screen and (max-width:350px){
+    #container{
+        font-size: 3.7vw;
+    }
+    #title{
+        font-size: 3.6vw;
+    }
+} 
+
+
