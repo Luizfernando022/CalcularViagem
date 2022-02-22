@@ -12,7 +12,7 @@ body {
   height: 75px;
   align-items: center;
   justify-content: center;
-  border-radius: 0px 0px 5px 5px;
+
 }
 #logo {
   font-size: 42px;
@@ -37,17 +37,16 @@ body {
     rgb(138, 88, 255),
     rgba(138, 88, 255, 0.446)
   );
-  height: 400px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* font-size: 1.5vw; */
-  font-family: "Bebas Neue", cursive;
 }
+
 .projetos {
-    position: absolute;
-    top: 440px;
+    position: relative;
+    top: -15px;
     border-radius: 100px 100px 0px 0px;
     height: 500px;
     width: calc(100% - 40px);
@@ -56,6 +55,16 @@ body {
     flex-direction: column;
     padding: 20px;
 }
+#whiteline{
+  height: 2px;
+  position: absolute;
+  top:100px;
+  width: 300px;
+  background-color: black;
+  align-self: center;
+  /* margin-bottom: 70px; */
+
+}
 #sessao{
     display: grid;
     grid-template-areas:
@@ -63,42 +72,72 @@ body {
       "a3 a3 a4 a4 a4";
       gap: 15px;
 }
+#sessao2{
+  background-color: antiquewhite;
+  height: 600px;
+}
+
 .a1 {
   display: flex;
   grid-area: a1;
   justify-content: center;
   align-items: center;
+  margin-bottom: 100px;
 }
 .a2 {
   display: flex;
   grid-area: a2;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  box-shadow: 2px 5px 10px 0px;
   height: 100px;
+  transition-property: transform ;
+  transition-duration: 500ms;
+  
+}
+.a2:hover{
+  transform: scale(1.02);
+  box-shadow: 2px 5px 20px 0px;
+}
+.a3:hover{
+  transform: scale(1.02);
+  box-shadow: 2px 5px 20px 0px;
+}
+.a4:hover{
+  transform: scale(1.02);
+  box-shadow: 2px 5px 20px 0px;
 }
 .a3 {
   display: flex;
   grid-area: a3;
   justify-content: center;
   align-items: center;
-  background-color: blue;
   height: 300px;
   /* width: 550px; */
-
+  box-shadow: 2px 5px 10px 0px;
+  transition-property: transform box-shadow;
+  transition-duration: 500ms;
 }
 .a4 {
   display: flex;
   grid-area: a4;
   justify-content: center;
   align-items: center;
-  background-color: green;
+  box-shadow: 2px 5px 10px 0px;
+  transition-property: transform box-shadow;
+  transition-duration: 500ms;
   /* width: 700px; */
 }
 #title {
-  /* background-color: indigo; */
-  font-size: 1.6vw;
-  font-family: "Redressed", cursive;
+    font-size: 25px;
+    font-family: "Redressed", cursive;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+p{
+  font-family: "Bebas Neue", cursive;
 }
 
 @media screen and (max-width: 850px) {
@@ -151,14 +190,68 @@ body {
   #container1 {
     font-size: 4.4vw;
   }
+  .a1{
+    font-size: 6vw;
+  }
+  #whiteline{
+    top: 70px;
+    width: 60%;
+  }
   #logo {
     font-size: 10vw;
   }
   #title {
     font-size: 4.2vw;
   }
+  #title > p{
+    font-size: 12px;
+  }
+  #sessao{
+    grid-template-areas: "a2"
+                         "a3"
+                         "a4";
+}  
+.a2{
+  height: 200px;
+  font-size: 4vw;
+}
+.a3{
+ height: 200px;
+ font-size: 4vw;
+}
+.a4{
+ height: 200px;
+ font-size: 4vw;
+}
 }
 @media screen and (max-width: 250px) {
+  #container1 {
+    font-size: 5.8vw;
+    height: 200px;
+  }
+  #logo {
+    font-size: 10vw;
+  }
+  #title {
+    font-size: 4vw;
+  }
+  #title > p{
+    font-size: 8px;
+  }
+  .a1{
+    font-size: 6vw;
+  }
+  .a2{
+    font-size: 5.0vw;
+  }
+  .a3{
+    font-size: 5.0vw;
+  }
+  .a4{
+    font-size: 5.6vw;
+  }
+}
+@media screen and (max-width: 230px) {
   #container1 {
     font-size: 5.8vw;
   }
@@ -168,4 +261,50 @@ body {
   #title {
     font-size: 4vw;
   }
+ #sessao{
+     grid-template-areas: "a2"
+                          "a3"
+                          "a4";
+ }  
+ .a1{
+   font-size: 5.3vw;
+ }
+ .a2{
+   height: 150px;
+   font-size: 4.6vw;
+  
+ }
+ .a3{
+  height: 150px;
+}
+.a4{
+  height: 150px;
+}
+#whiteline{
+  top: 10%;
+}
+}
+@media screen and (max-width: 170px) {
+  #container1 {
+    font-size: 30px;
+    height: 200px;
+  }
+  #logo {
+    font-size: 10vw;
+  }
+  #title > p {
+    font-size: 4.9vw;
+  }
+ .a1{
+   font-size: 5.3vw;
+ }
+ .a2{
+   height: 200px;
+ }
+ .a3{
+  height: 200px;
+}
+.a4{
+  height: 200px;
+}
 }
