@@ -4,13 +4,15 @@ body {
   display: grid;
   padding: 0;
   margin: 0;
+  background-color: rgb(20, 20, 20);
+  color: black;
 }
 
 #header {
   display: flex;
   /* background-color: rgb(138, 88, 255); */
   height: 75px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(20, 20, 20);
   align-items: flex-end;
   justify-content: center;
   border-radius: 0px 0px 100px 100px;
@@ -47,6 +49,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .projetos {
@@ -55,17 +58,21 @@ body {
   border-radius: 100px 100px 100px 100px;
   height: 800px;
   width: calc(100% - 40px);
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(20, 20, 20);
   display: flex;
   flex-direction: column;
   padding: 20px;
+
 }
-#whiteline {
+.pp{
+  color: white;
+}
+#purpleline {
   height: 2px;
   position: absolute;
   top: 100px;
   width: 300px;
-  background-color: black;
+  background-color: rgb(138, 88, 255);
   align-self: center;
   /* margin-bottom: 70px; */
 }
@@ -89,10 +96,12 @@ body {
   align-items: center;
 }
 .container2 {
-  height: 400px;
+  height: 500px;
+  width: 70%;
   background-color: black;
-  width: 300px;
-  border-radius: 30px 10px 100px 200px;
+  border-radius: 10px;
+  color: white;
+
 }
 
 .a1 {
@@ -205,14 +214,14 @@ p {
     font-size: 3.6vw;
   }
 }
-@media screen and (max-width: 355px) {
+@media screen and (max-width: 400px) {
   #container1 {
     font-size: 4.4vw;
   }
   .a1 {
     font-size: 6vw;
   }
-  #whiteline {
+  #purpleline {
     top: 70px;
     width: 60%;
   }
@@ -310,7 +319,7 @@ p {
   .a4 {
     height: 150px;
   }
-  #whiteline {
+  #purpleline {
     top: 10%;
   }
 }
