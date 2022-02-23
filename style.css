@@ -201,15 +201,18 @@ p {
     font-size: 1.2em;
   }
 }
-/* 
- @media screen and (max-width:750px){
-    #container{
-        font-size: 0.8em;
+
+ @media screen and (max-width:650px){
+    .a2{
+      font-size: 2vw;
     }
-    #title{
-        font-size: 2.2vw;
+    .a3{
+      font-size: 2vw;
     }
-} */
+    .a4{
+      font-size: 2vw;
+    }
+}
 @media screen and (max-width: 510px) {
 
   #container1 {
@@ -219,15 +222,16 @@ p {
   #title {
     font-size: 1.1em;
     align-items: center;
+    margin-left: 0px;
   }
   h1{
     font-size: 1.6em;
   }
   .a3{
-    font-size: 2.7vw;
+    font-size: 2.0vw;
   }
   .a4{ 
-    font-size: 2.7vw;
+    font-size: 2.0vw;
   }
 }
 
@@ -246,10 +250,10 @@ p {
     font-size: 3.6vw;
   }
   .a3{
-    font-size: 11px;
+    font-size: 2.0vw;
   }
   .a4{
-    font-size: 11px;
+    font-size: 2.0vw;
   }
 }
 @media screen and (max-width: 410px) {
