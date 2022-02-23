@@ -347,7 +347,7 @@ p {
   }
   .a2 {
     height: 150px;
-    font-size: 4.6vw;
+    font-size: 4.0vw;
   }
   .a3 {
     height: 150px;
@@ -356,7 +356,7 @@ p {
     height: 150px;
   }
   #purpleline {
-    top: 10%;
+    top: calc(5% + 10px)
   }
 }
 @media screen and (max-width: 170px) {
