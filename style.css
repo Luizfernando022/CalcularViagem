@@ -249,9 +249,6 @@ p {
   }
 }
 @media screen and (max-width: 410px) {
-  #container1 {
-    font-size: 4.4vw;
-  }
   .a1 {
     font-size: 5.5vw;
   }
@@ -259,14 +256,17 @@ p {
     top: 80px;
     width: 60%;
   }
+  #header{
+    height: 50px;
+  }
   #logo {
-    font-size: 10vw;
+   width: 30px;
   }
   #title {
-    font-size: 4.2vw;
+    font-size: 4.0vw;
   }
   #title > p {
-    font-size: 12px;
+    font-size: 3.2vw;
   }
   #sessao {
     grid-template-areas:
@@ -300,12 +300,7 @@ p {
     font-size: 5.8vw;
     height: 200px;
   }
-  #header{
-    height: 50px;
-  }
-  #logo {
-   width: 30px;
-  }
+ 
   #title {
     font-size: 4vw;
   }
