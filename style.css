@@ -1,55 +1,51 @@
-@import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Redressed&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat&family=Montserrat:wght@100&display=swap');
 body {
   display: grid;
   padding: 0;
   margin: 0;
-  background-color: rgb(20, 20, 20);
+  background-color: RGB(2, 18, 51);
   color: black;
 }
 
 #header {
   display: flex;
   /* background-color: rgb(138, 88, 255); */
-  height: 75px;
-  background-color: rgb(20, 20, 20);
+  height: 100px;
+  background-image: linear-gradient(to right,#011434,transparent,transparent,#011339);
   align-items: flex-end;
   justify-content: center;
-  border-radius: 0px 0px 100px 100px;
   position: relative;
-  top: 20px;
-  width: calc(100% - 40px);
-  margin: auto;
 }
 #logo {
-  font-size: 42px;
-  color: transparent;
-  background-image: linear-gradient(
-    to bottom,
-    rgb(138, 88, 255),
-    rgba(138, 88, 255, 0.8)
-  );
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  transition-property: transform;
-  transition-duration: 400ms;
+  position: relative;
+  top: -20px;
+  transform: rotate(90deg);
 }
-
+@keyframes rotate{
+  0%{}
+  100%{transform: rotate(450deg);}
+}
 #logo:hover {
-  transform: scale(1.1);
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
 }
 #container1 {
-  background-image: linear-gradient(
-    to bottom,
-    rgb(138, 88, 255),
-    rgba(138, 88, 255, 0.8)
-  );
-  height: 500px;
+  background-image: url(./sources/Passenger-plane-flight-in-sky-dusk-sun-rays_3840x2160.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+  height: 700px;
+  justify-content: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
+  align-items: flex-start;
+  color:white;
+  text-shadow: 0px 0px  30px RGB(211, 159, 111);
+ 
 }
 
 .projetos {
@@ -58,31 +54,39 @@ body {
   border-radius: 100px 100px 100px 100px;
   height: 800px;
   width: calc(100% - 40px);
-  background-color: rgb(20, 20, 20);
+  background-color: RGB(2, 18, 51);
   display: flex;
   flex-direction: column;
   padding: 20px;
+  /* padding-top: 200px; */
 
 }
 .pp{
   color: white;
 }
+.a3 > h3{
+  color: rgba(255, 255, 255, 0.549);
+}
+.a4 > h3{
+  color: rgba(255, 255, 255, 0.549);
+}
+
 #purpleline {
   height: 2px;
   position: absolute;
   top: 100px;
   width: 300px;
-  background-color: rgb(138, 88, 255);
+  background-color: white;
   align-self: center;
   /* margin-bottom: 70px; */
 }
 #sessao {
   display: grid;
   grid-template-areas:
-    "a2 a2 a2 a2 a2"
-    "a3 a3 a4 a4 a4";
-  gap: 15px;
-  background-color: rgb(138, 88, 255);
+    "a2 a2 a2 a2"
+    "a3 a3 a4 a4";
+  gap: 30px;
+  background-color:  RGB(2, 18, 51);
   border-radius: 10px 10px 10px 10px;
   padding: 30px;
 }
@@ -118,18 +122,20 @@ body {
   grid-area: a1;
   justify-content: center;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 .a2 {
   display: flex;
   grid-area: a2;
+  padding:10px 0px 10px 0px;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   box-shadow: 2px 5px 10px 0px;
   height: 100px;
   transition-property: transform;
   transition-duration: 500ms;
-  background-color: rgb(138, 88, 255);
+  background-color: RGB(12, 32, 77);
 }
 .a2:hover {
   transform: scale(1.02);
@@ -155,7 +161,7 @@ body {
   box-shadow: 2px 5px 10px 0px;
   transition-property: transform box-shadow;
   transition-duration: 500ms;
-  background-color: rgb(138, 88, 255);
+  background-color: RGB(12, 32, 77);
 }
 .a4 {
   display: flex;
@@ -167,14 +173,15 @@ body {
   transition-property: transform box-shadow;
   transition-duration: 500ms;
   /* width: 700px; */
-  background-color: rgb(138, 88, 255);
+  background-color: RGB(12, 32, 77);
 }
 #title {
-  font-size: 25px;
-  font-family: "Redressed", cursive;
+  font-size: 22px;
+  font-family: 'Times New Roman', Times, serif;
   display: flex;
-  align-items: center;
-  justify-content: start;
+  align-items: flex-start;
+  margin-left: 5%;
+  justify-content: center;
   flex-direction: column;
 }
 p {
@@ -184,6 +191,7 @@ p {
 @media screen and (max-width: 850px) {
   #container1 {
     font-size: 1em;
+    background-position: center;
   }
   #title {
     font-size: 1.2em;
@@ -198,19 +206,18 @@ p {
         font-size: 2.2vw;
     }
 } */
-@media screen and (max-width: 500px) {
-  #header {
-    height: 70px;
-    /* align-items: flex-start; */
-  }
-  #logo {
-    font-size: 32px;
-  }
+@media screen and (max-width: 510px) {
+
   #container1 {
     font-size: 1em;
+    align-items: center;
   }
   #title {
     font-size: 1.1em;
+    align-items: center;
+  }
+  #title > h1{
+    font-size: 1.6em;
   }
   .a3{
     font-size: 2.7vw;
@@ -225,8 +232,11 @@ p {
     font-size: 3.7vw;
     height: 350px;
   }
-  .projetos-roundeed {
-    border-radius: 30px;
+  #header{
+    height: 75px;
+  }
+  #logo{
+    top: -10px;
   }
   #title {
     font-size: 3.6vw;
@@ -238,7 +248,7 @@ p {
     font-size: 11px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 410px) {
   #container1 {
     font-size: 4.4vw;
   }
@@ -285,14 +295,16 @@ p {
   }
 }
 
-}
 @media screen and (max-width: 250px) {
   #container1 {
     font-size: 5.8vw;
     height: 200px;
   }
+  #header{
+    height: 50px;
+  }
   #logo {
-    font-size: 10vw;
+   width: 30px;
   }
   #title {
     font-size: 4vw;
@@ -316,11 +328,6 @@ p {
 @media screen and (max-width: 230px) {
   #container1 {
     font-size: 5.8vw;
-  }
-  #logo {
-    font-size: 10vw;
-    position: relative;
-    top: -20px;
   }
 
   #title {
