@@ -95,20 +95,23 @@ body {
   height: 1000px;
   /* margin-top: 100px; */
   display: flex;
+  flex-direction: column;
   margin-top: -45px;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  position: relative;
 }
 .container2 {
   height: 700px;
   width: 70%;
-  background-color: RGB(2, 18, 51);
+  background-color: rgb(2, 18, 51);
   border-radius: 0px 10px 10px 0px;
   box-shadow: 2px 5px 10px 0px;
   display: flex;
   justify-content: center;
   flex-direction:column;
   align-items:center;
+  /* margin-left: -250%; */
 }
 #forms{
   background-color: RGB(2, 18, 51);
@@ -133,7 +136,36 @@ body {
 .form:focus{
   outline:solid 2px cyan;
 }
+#result{
+  background-color:rgb(2, 18, 51);
+  height: 500px;
+  position: absolute;
+  width: calc(90% - 50px);
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius:50px;
+  /* animation-name: result; */
+  animation-timing-function: ease;
+  /* animation-iteration-count: infinite; */
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  top: -10000px;
+}
+#btn{ 
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  background-color:RGB(12, 32, 77) ;
+  color: white;
+}
+@keyframes result{
+  0%{top: -1000px; opacity: 1;}
+  100%{top: 25%; opacity: 1;}
 
+}
 
 .a1 {
   display: flex;
@@ -261,6 +293,9 @@ p {
   .container2{
     width: 100%;
   }
+  #result{
+    width:100%;
+  }
   #title {
     font-size: 1.1em;
     align-items: center;
@@ -311,6 +346,9 @@ p {
   }
   #logo {
    width: 30px;
+  }
+  #result{
+    font-size: 0.7rem;
   }
   #title {
     font-size: 3.0vw;
@@ -378,6 +416,9 @@ p {
   #title {
     font-size: 4vw;
   }
+  #result{
+    font-size: 0.5rem;
+  }
   #sessao {
     grid-template-areas:
       "a2"
@@ -401,10 +442,14 @@ p {
     top: calc(5% + 10px)
   }
 }
-@media screen and (max-width: 170px) {
+@media screen and (max-width: 180px) {
   #container1 {
     font-size: 30px;
     height: 200px;
+  }
+  #result{
+    font-size: 5vw;
+    height: 200vw;
   }
   #logo {
     font-size: 10vw;
