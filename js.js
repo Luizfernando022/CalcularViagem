@@ -24,7 +24,7 @@ document.getElementsByClassName("btn")[0].addEventListener("click", () => {
 
   var restante = salario - gastos - bagagem - passagem;
 
-  if (salario == "" || passagem == "" || bagagem == "" || dias == "") {
+  if (salario == '' || passagem == '' || bagagem == '' || dias == '') {
     alert("Todos os campos devem ser preenchidos");
   } else if (restante >= 0) {
     result.style.animationName = "result";
