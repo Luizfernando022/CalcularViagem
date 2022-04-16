@@ -3,10 +3,10 @@ document.getElementsByClassName("btn")[0].addEventListener("click", () => {
   var resulth2 = document.getElementById('resulth2')
   var resultp = document.getElementById('resultp')
   var nome = document.getElementsByClassName("f1")[0].value;
-  var salario = parseInt(document.getElementsByClassName("f2")[0].value);
-  var passagem = parseInt(document.getElementsByClassName("f3")[0].value);
-  var bagagem = parseInt(document.getElementsByClassName("f4")[0].value);
-  var dias = parseInt(document.getElementsByClassName("f5")[0].value);
+  var salario = document.getElementsByClassName("f2")[0].value;
+  var passagem = document.getElementsByClassName("f3")[0].value;
+  var bagagem = document.getElementsByClassName("f4")[0].value;
+  var dias = document.getElementsByClassName("f5")[0].value;
   if (bagagem > 0 && bagagem <= 10) {
     bagagem = 50;
   } else if (bagagem > 10 && bagagem <= 20) {
@@ -22,10 +22,10 @@ document.getElementsByClassName("btn")[0].addEventListener("click", () => {
     gastos = 250 * dias;
   }
 
-  var restante = salario - gastos - bagagem - passagem;
+  var restante = parseInt(salario) - parseInt(gastos) - parseInt(bagagem) - parseInt(passagem);
 
   if (salario == '' || passagem == '' || bagagem == '' || dias == '') {
-    alert("Todos os campos devem ser preenchidos");
+    alert("Informe os dados");
   } else if (restante >= 0) {
     result.style.animationName = "result";
     resulth2.innerHTML = `Boas notícias ${nome}`;
