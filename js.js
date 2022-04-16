@@ -15,6 +15,7 @@ document.getElementsByClassName("btn")[0].addEventListener("click", () => {
     bagagem = 150;
   }
 
+  console.log(dias)
   var gastos = 0;
   if (dias === "") {
     gastos = 0;
@@ -22,8 +23,10 @@ document.getElementsByClassName("btn")[0].addEventListener("click", () => {
     gastos = 250 * dias;
   }
 
+
   var restante = parseInt(salario) - parseInt(gastos) - parseInt(bagagem) - parseInt(passagem);
 
+  if(!isNaN(restante)){
   if (salario == '' || passagem == '' || bagagem == '' || dias == '') {
     alert("Informe os dados");
   } else if (restante >= 0) {
@@ -36,6 +39,9 @@ document.getElementsByClassName("btn")[0].addEventListener("click", () => {
     resulth2.innerHTML = `Más notícias ${nome}`;
     resultp.innerHTML = `Você não pode viajar :/ ainda falta R$ ${restante}`
   }
+}else{
+  alert('Apenas numeros!')
+}
   
   
 });
