@@ -30,10 +30,12 @@ document.getElementsByClassName("btn")[0].addEventListener("click", () => {
   if (salario == '' || passagem == '' || bagagem == '' || dias == '') {
     alert("Informe os dados");
   } else if (restante >= 0) {
+    result.style.display = "flex"
     result.style.animationName = "result";
     resulth2.innerHTML = `Boas notícias ${nome}`;
     resultp.innerHTML = `Você pode viajar :) e vai te sobrar R$ ${restante}`
   } else {
+    result.style.display = "flex"
     result.style.animationName = "result";
     var restante = Math.abs(salario - gastos - bagagem - passagem);
     resulth2.innerHTML = `Más notícias ${nome}`;
@@ -47,6 +49,7 @@ document.getElementsByClassName("btn")[0].addEventListener("click", () => {
 });
 
 function restart(){
+  result.style.display = "none"
   result.style.animationName = "";
   document.getElementsByClassName("f1")[0].focus()
   document.getElementsByClassName("f1")[0].value = ''
